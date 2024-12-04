@@ -56,7 +56,10 @@ public class LinkeListe<T> {
     public Node getNodeAt(int counter){
         Node current = head;
         for (int i = 1; i <= counter; i++){
+            if (current.next == null){return null}
+            else{
             current = current.next != null ? current.next : null;
+            }
         }
         return current;
     }
